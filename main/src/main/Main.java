@@ -6,6 +6,8 @@ public class Main {
     System.out.println("All records:");
     for (Product p : db.returnAllRecords()) {
         System.out.println(p.lineRepresentation());
+    public static void main(String[] args) {
+        
     }
     String key = "P2394";
     System.out.println("Contains " + key + ": " + db.contains(key));
