@@ -1,18 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package main;
-
-/**
- *
- * @author muhel
- */
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+ public static void main(String[] args) {
+    ProductDatabase db = new ProductDatabase("Products.txt");
+    db.readFromFile();
+    System.out.println("All records:");
+    for (Product p : db.returnAllRecords()) {
+        System.out.println(p.lineRepresentation());
     }
+    String key = "P2394";
+    System.out.println("Contains " + key + ": " + db.contains(key));
+    Product found = db.getRecord(key);
+    if (found != null) {
+        System.out.println("Found: " + found.lineRepresentation());
+    } else {
+        System.out.println("Not found: " + key);
+    }
+ }
 }
