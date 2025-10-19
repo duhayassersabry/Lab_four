@@ -1,5 +1,5 @@
 package main;
-public class EmployeeUser {
+public class EmployeeUser implements abs1 {
    private String name;
    private String address;
    private String employeeId;
