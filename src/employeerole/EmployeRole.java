@@ -14,13 +14,16 @@ public EmployeRole()
 }
         
 public void addProduct(String productID, String productName, String 
-manufacturerName, String supplierName, int quantity)
+manufacturerName, String supplierName, int quantity , float price)
 {
-    if (contains(productID))
+    if (PD.contains(productID))
     {
         System.out.println("this Product: " + productName + "is Already exist.");
         return;
     }
+    
+     Product p = new Product(productID, productName, manufacturerName, supplierName, quantity, price);
+        PD.insertRecord(p);
 }
     
     public Product[] getListOfProducts() {
@@ -41,8 +44,6 @@ manufacturerName, String supplierName, int quantity)
         
         CustomerProduct cp = new CustomerProduct(customerSSN, productID, purchaseDate);
         CPD.insertRecord(cp);
-        PD.saveToFile();
-        CPD.saveToFile();
         return true;
     }
      
@@ -59,8 +60,6 @@ manufacturerName, String supplierName, int quantity)
        // Otherwise -------------------------------------------------
         p.setQuantity(p.getQuantity() + 1);
         CPD.deleteRecord(key);
-        PD.saveToFile();
-        CPD.saveToFile();
         return p.getPrice();
     }
     
@@ -74,19 +73,16 @@ public boolean applyPayment(String customerSSN, LocalDate purchaseDate) {
         if (cp.getCustomerSSN().equals(customerSSN) && cp.getPurchaseDate().equals(purchaseDate)) {
             if (!cp.isPaid()) {
                 cp.setPaid(true);
-                CPD.saveToFile();
                 System.out.println("Paid successfully.");
                 return true; 
             } 
             else {
-                return false; 
                 System.out.println("This payment is already paid");
-            }
+                return false; 
+                 }
         }
     }
-
         System.out.println("Invalid: There is no purchase !!");
-
     return false;
 }
 
@@ -94,5 +90,6 @@ public boolean applyPayment(String customerSSN, LocalDate purchaseDate) {
      {
       PD.saveToFile();
       CPD.saveToFile();
+      System.out.println("All data saved. Logging out.");
      }
 }
