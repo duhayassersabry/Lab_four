@@ -32,4 +32,16 @@ public class Product {
     public String getSearchKey() {
         return productID;
     }
+    public boolean takeUnit() {
+        if (quantity > 0) {
+            quantity--;
+            return true;  
+        } else {
+            System.out.println("No units available for product: " + productID);
+            return false;
+        }
+    }
+      public void returnUnit() {
+        quantity++;
+    }
 }
