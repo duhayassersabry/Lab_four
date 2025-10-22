@@ -24,6 +24,14 @@ public class CustomerProduct {
     public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
+        public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
+    }
+
 
 
 
