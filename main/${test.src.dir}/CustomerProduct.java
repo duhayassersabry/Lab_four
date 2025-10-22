@@ -13,6 +13,17 @@ public class CustomerProduct {
         this.purchaseDate = purchaseDate;
         this.paid = false;
     }
+            public String getCustomerSSN() {
+        return customerSSN;
+    }
+
+    public String getProductID() {
+        return productID;
+    }
+
+    public LocalDate getPurchaseDate() {
+        return purchaseDate;
+    }
 
 
 
