@@ -6,7 +6,7 @@ import java.io.*;
 import java.time.LocalDate;
 
 
-public class CustomerProductDatabase {
+public class CustomerProductDatabase implements abs2{
     
     private String filename;
     private ArrayList<CustomerProduct> records = new ArrayList<>();
