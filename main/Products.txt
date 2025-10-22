@@ -1,3 +1,9 @@
-P2394,Laptop,Apple,TechSupplier,10,1500.0
-P5120,Smartphone,Samsung,GlobalMobiles,25,899.99
-P7811,Headphones,Sony,AudioWorld,50,129.5
+P001,Laptop,Dell,TechSupplier,5,1200.5
+P042,Phone,Samsung,MobileWorld,14,899.9
+P051,Laptop,Dell,TechSupplier,5,1200.5
+P082,Phone,Samsung,MobileWorld,10,899.9
+P003,Laptop,Dell,TechSupplier,5,1200.5
+P004,Phone,Samsung,MobileWorld,10,899.9
+P006,Laptop,Dell,TechSupplier,5,1200.5
+P009,Phone,Samsung,MobileWorld,10,899.9
+P007,Headphones,Sony,AudioShop,15,199.99
