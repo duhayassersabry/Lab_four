@@ -35,3 +35,12 @@ public class AdminRole {
         database.saveToFile();
     }
 }
+public EmployeeUserDatabase getDatabase() {
+    return database;
+}
+
+public void setDatabase(EmployeeUserDatabase database) {
+    this.database = database;
+}
+
+
