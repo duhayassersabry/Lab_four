@@ -24,4 +24,14 @@ public class AdminRole {
         return arr;
     }
 
-  
+    public void removeEmployee(String key) {
+        if (database.contains(key)) {
+            database.deleteRecord(key);
+            database.saveToFile();
+        }
+    }
+
+    public void logout() {
+        database.saveToFile();
+    }
+}
