@@ -36,8 +36,9 @@ public class CustomerProduct {
                 String.format("%02d-%02d-%04d", purchaseDate.getDayOfMonth(), purchaseDate.getMonthValue(), purchaseDate.getYear()) +
                 "," + paid;
     }
-
-
-
+    public String getSearchKey() {
+        return customerSSN + "," + productID + "," +
+                String.format("%02d-%02d-%04d", purchaseDate.getDayOfMonth(), purchaseDate.getMonthValue(), purchaseDate.getYear());
+    }
 
 }
