@@ -15,4 +15,13 @@ public class AdminRole {
         }
     }
 
+    public EmployeeUser[] getListOfEmployees() {
+        java.util.ArrayList<EmployeeUser> list = database.returnAllRecords();
+        EmployeeUser[] arr = new EmployeeUser[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            arr[i] = list.get(i);
+        }
+        return arr;
+    }
+
   
