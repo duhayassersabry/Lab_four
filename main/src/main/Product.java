@@ -1,6 +1,6 @@
 package main;
 
-public class Product {
+public class Product implements abs1 {
     private String productID;
     private String productName;
     private String manufacturerName;
@@ -23,6 +23,46 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+    public String getProductName()
+    {
+        return productName;
+    }
+    public void setProductName(String name)
+    {
+        this.productName=name;
+    }
+    public String getManufacturerName()
+    {
+        return manufacturerName;
+    }
+    public void setManufactureName(String manufacturername)
+    {
+        this.manufacturerName=manufacturername;
+    }
+    public String getSupplierName()
+    {
+        return supplierName;
+    }
+    public void setSupplierName(String sname)
+    {
+        this.supplierName=sname;
+    }
+    public String getProductID()
+    {
+        return productID;
+    }
+    public void setparoductID(String productid)
+    {
+        this.productID=productid;
+    }
+    public float getPrice()
+    {
+        return price;
+    }
+    public void setPrice(float p)
+    {
+        this.price=p;
     }
 
     public String lineRepresentation() {

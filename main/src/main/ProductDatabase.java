@@ -3,7 +3,7 @@ package main;
 import java.io.*;
 import java.util.ArrayList;
 
-public class ProductDatabase {
+public class ProductDatabase implements abs2 {
 
     private ArrayList<Product> records;
     private String filename;
