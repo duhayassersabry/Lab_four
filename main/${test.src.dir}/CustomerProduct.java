@@ -7,6 +7,12 @@ public class CustomerProduct {
     private LocalDate purchaseDate;
     private boolean paid;
 
+        public CustomerProduct(String customerSSN, String productID, LocalDate purchaseDate) {
+        this.customerSSN = customerSSN;
+        this.productID = productID;
+        this.purchaseDate = purchaseDate;
+        this.paid = false;
+    }
 
 
 
